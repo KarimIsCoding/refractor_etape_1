@@ -1,0 +1,2 @@
+class ration():
+    quantite : float
