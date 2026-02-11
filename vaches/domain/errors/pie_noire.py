@@ -28,6 +28,10 @@ class PieNoire(VacheALait):
         self.lait_disponible = 0.0
         self.lait_total_produit = 0.0
 
+    @property
+    def ration(self):
+        return self._ration.copy()
+
     def brouter(self, quantite: float, nourriture: TypeNourriture = None):
         if quantite <= 0:
             raise InvalidVacheException("La quantité de nourriture doit être positive.")
@@ -52,6 +56,7 @@ class PieNoire(VacheALait):
             coefficient = PieNoire.COEFFICIENT_LAIT_PAR_NOURRITURE.get(nourriture, 0)
             lait += quantite * coefficient
         return lait
+
 
     def _stocker_lait(self, lait: float):
         self.lait_disponible += lait

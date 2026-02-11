@@ -29,7 +29,7 @@ class VacheALait:
         return self._laitTotalTraite
 
     def __str__(self):
-        return f"La vache à lait a {self.getLait_disponible()} de lait disponible, {self.getLaitTotalProduit()} produit et enfin {self.getLaitTotalTraite()} de lait traitée."
+        return f"La vache à lait a {self.lait_disponible()} de lait disponible, {self.lait_total_produit()} produit et enfin {self.lait_total_traite()} de lait traitée."
 
 
     def ruminer(self):
