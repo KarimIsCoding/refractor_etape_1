@@ -1,7 +1,7 @@
 import pytest
 
-from vaches.exceptions import InvalidVacheException
-from vaches.Vache import Vache
+from vaches.domain.errors.exception.InvalidVacheException import InvalidVacheException
+from vaches.domain.errors.Vache import Vache
 
 
 # -------------------------
